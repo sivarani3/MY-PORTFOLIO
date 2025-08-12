@@ -1,0 +1,1444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G.SIVA RANI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Siva Rani CSS Variables */
+        :root {
+            --siva-rani-primary: hsl(265, 100%, 60%);
+            --siva-rani-secondary: hsl(325, 100%, 60%);
+            --siva-rani-tertiary: hsl(185, 100%, 60%);                
+            --siva-rani-dark: hsl(240, 20%, 10%);
+            --siva-rani-light: hsl(0, 0%, 98%);
+            --siva-rani-accent: hsl(45, 100%, 60%);
+            --siva-rani-error: hsl(0, 100%, 60%);
+            --siva-rani-success: hsl(120, 100%, 60%);
+            --siva-rani-warning: hsl(30, 100%, 60%);
+            --siva-rani-info: hsl(200, 100%, 60%);
+        }
+
+        /* Siva Rani Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--siva-rani-dark);
+            color: var(--siva-rani-light);
+            overflow-x: hidden;
+            perspective: 1000px;
+        }
+
+        /* Siva Rani Noise Background */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(100, 0, 255, 0.1) 0%, transparent 30%),
+                radial-gradient(circle at 80% 70%, rgba(255, 0, 200, 0.1) 0%, transparent 30%),
+                radial-gradient(circle at 50% 20%, rgba(0, 200, 255, 0.1) 0%, transparent 30%);
+            pointer-events: none;
+            z-index: -1;
+            animation: sivaRaniNoise 0.2s infinite alternate;
+        }
+
+        @keyframes sivaRaniNoise {
+            0% { opacity: 0.9; transform: translate(0, 0); }
+            20% { opacity: 0.92; transform: translate(-0.5px, -0.5px); }
+            40% { opacity: 0.94; transform: translate(0.5px, -0.5px); }
+            60% { opacity: 0.96; transform: translate(-0.5px, 0.5px); }
+            80% { opacity: 0.98; transform: translate(0.5px, 0.5px); }
+            100% { opacity: 1; transform: translate(0, 0); }
+        }
+
+        /* Siva Rani Grid System */
+        .siva-rani-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 1.5rem;
+            padding: 0 5vw;
+        }
+
+        /* Siva Rani Heroine Section - Never Seen Before Concept */
+        .siva-rani-heroine {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            grid-column: 1 / -1;
+            isolation: isolate;
+        }
+
+        .g-siva-rani-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5vw;
+        }
+
+        .g-siva-rani-content {
+            position: relative;
+            z-index: 2;
+            max-width: 50%;
+            animation: sivaRaniEntrance 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        }
+
+        .g-siva-rani-title {
+            font-size: 5rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, var(--siva-rani-primary), var(--siva-rani-secondary), var(--siva-rani-accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+            animation: titleGlow 4s infinite alternate;
+        }
+
+        @keyframes titleGlow {
+            0% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.1); }
+            50% { text-shadow: 0 0 30px rgba(255, 255, 255, 0.3); }
+            100% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.1); }
+        }
+
+        .g-siva-rani-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 80%;
+            animation: subtitleEntrance 1.8s ease-out forwards;
+        }
+
+        @keyframes subtitleEntrance {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 0.9; transform: translateY(0); }
+        }
+
+        .g-siva-rani-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        /* Revolutionary Heroine Image - Never Before Seen Effect */
+        .g-siva-rani-image-container {
+            position: relative;
+            width: 40%;
+            height: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            perspective: 1000px;
+            animation: imageFloat 8s infinite ease-in-out;
+        }
+
+        @keyframes imageFloat {
+            0%, 100% { transform: translateY(0) rotate(1deg); }
+            50% { transform: translateY(-20px) rotate(-1deg); }
+        }
+
+        .g-siva-rani-image {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: url('/BC152E40-4713-4E42-A08F-429DA2E55DF6.jpg') center/cover;
+            border-radius: 15px;
+            transform-style: preserve-3d;
+            box-shadow: 
+                0 0 50px rgba(100, 0, 255, 0.5),
+                0 0 100px rgba(255, 0, 200, 0.3),
+                0 0 150px rgba(0, 200, 255, 0.1);
+            animation: imageTilt 20s infinite alternate;
+            filter: saturate(1.2) contrast(1.1);
+        }
+
+        @keyframes imageTilt {
+            0% { transform: rotateY(-5deg) rotateX(5deg); }
+            50% { transform: rotateY(5deg) rotateX(-5deg); }
+            100% { transform: rotateY(-5deg) rotateX(5deg); }
+        }
+
+        .g-siva-rani-image::before {
+            content: '';
+            position: absolute;
+            inset: -10px;
+            background: linear-gradient(45deg, var(--siva-rani-primary), var(--siva-rani-secondary), var(--siva-rani-accent));
+            z-index: -1;
+            filter: blur(20px);
+            opacity: 0.7;
+            border-radius: 30px;
+            animation: gradientShift 15s infinite alternate;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .g-siva-rani-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, transparent 60%, rgba(0, 0, 0, 0.7));
+            border-radius: 20px;
+        }
+
+        /* Siva Rani Particles - Unique Animation */
+        .siva-rani-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            background: linear-gradient(45deg, var(--siva-rani-primary), var(--siva-rani-secondary));
+            border-radius: 50%;
+            filter: blur(5px);
+            animation: particleFloat linear infinite;
+        }
+
+        @keyframes particleFloat {
+            0% { transform: translateY(0) translateX(0); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100vh) translateX(calc(var(--random-x) * 100px)); opacity: 0; }
+        }
+
+        /* Siva Rani Qualifications Section - Innovative Design */
+        .siva-rani-qualifications {
+            padding: 10rem 0;
+            grid-column: 1 / -1;
+            position: relative;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 5rem;
+            text-align: center;
+            background: linear-gradient(45deg, var(--siva-rani-primary), var(--siva-rani-secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--siva-rani-primary), var(--siva-rani-secondary));
+            border-radius: 3px;
+            transform: scaleX(0);
+            transform-origin: left;
+            animation: titleUnderline 1.5s ease-out forwards;
+        }
+
+        @keyframes titleUnderline {
+            0% { transform: scaleX(0); }
+            100% { transform: scaleX(1); }
+        }
+
+        .qualifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .qualification-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transform-style: preserve-3d;
+            transform: perspective(1000px);
+        }
+
+        .qualification-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(100, 0, 255, 0.1), transparent);
+            transform: translateY(100%);
+            transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            z-index: -1;
+        }
+
+        .qualification-card:hover::before {
+            transform: translateY(0);
+        }
+
+        .qualification-card:hover {
+            transform: translateY(-10px) perspective(1000px) rotateX(5deg);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .qualification-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, var(--siva-rani-primary), var(--siva-rani-secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .qualification-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .qualification-subtitle {
+            font-size: 1rem;
+            opacity: 0.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .qualification-description {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            line-height: 1.6;
+        }
+
+        /* Siva Rani Timeline - Unique Visualization */
+        .siva-rani-timeline {
+            position: relative;
+            grid-column: 1 / -1;
+            padding: 5rem 0;
+        }
+
+        .timeline-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--siva-rani-primary), var(--siva-rani-secondary));
+            border-radius: 10px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 4rem;
+            width: 100%;
+            perspective: 1000px;
+        }
+
+        .timeline-item:nth-child(odd) {
+            padding-right: calc(50% + 2rem);
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) {
+            padding-left: calc(50% + 2rem);
+            text-align: left;
+        }
+
+        .timeline-content {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.5s ease;
+            transform-origin: center left;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            transform-origin: center right;
+        }
+
+        .timeline-item:hover .timeline-content {
+            transform: scale(1.05);
+            border-color: var(--siva-rani-primary);
+            box-shadow: 0 20px 50px rgba(100, 0, 255, 0.3);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--siva-rani-primary), var(--siva-rani-secondary));
+            box-shadow: 0 0 20px var(--siva-rani-primary);
+            z-index: 1;
+        }
+
+        .timeline-date {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--siva-rani-primary);
+        }
+
+        .timeline-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-description {
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        /* Siva Rani Skills - Interactive Visualization */
+        .siva-rani-skills {
+            padding: 5rem 0;
+            grid-column: 1 / -1;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .skill-item {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .skill-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(100, 0, 255, 0.1), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            z-index: -1;
+        }
+
+        .skill-item:hover::before {
+            transform: translateX(0);
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 30px rgba(100, 0, 255, 0.2);
+            border-color: var(--siva-rani-primary);
+        }
+
+        .skill-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(45deg, var(--siva-rani-primary), var(--siva-rani-secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .skill-name {
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        /* Siva Rani Contact - Holographic Effect */
+        .siva-rani-contact {
+            padding: 5rem 0;
+            grid-column: 1 / -1;
+            position: relative;
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 3rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(
+                transparent,
+                transparent,
+                transparent,
+                var(--siva-rani-primary)
+            );
+            animation: contactHologram 4s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes contactHologram {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .contact-container::after {
+            content: '';
+            position: absolute;
+            inset: 2px;
+            background: var(--siva-rani-dark);
+            border-radius: 28px;
+            z-index: -1;
+        }
+
+        .contact-form {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            position: relative;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: var(--siva-rani-light);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--siva-rani-primary);
+            box-shadow: 0 0 10px rgba(100, 0, 255, 0.5);
+        }
+
+        .form-label {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        .form-input:focus + .form-label,
+        .form-input:not(:placeholder-shown) + .form-label {
+            top: -0.7rem;
+            left: 0.8rem;
+            font-size: 0.8rem;
+            background: var(--siva-rani-dark);
+            padding: 0 0.5rem;
+            color: var(--siva-rani-primary);
+        }
+
+        .form-textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-button {
+            justify-self: center;
+            margin-top: 1rem;
+        }
+
+        /* Siva Rani Footer - Particle Wave */
+        .siva-rani-footer {
+            padding: 3rem 0;
+            grid-column: 1 / -1;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, var(--siva-rani-primary), var(--siva-rani-secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-link {
+            color: var(--siva-rani-light);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .footer-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--siva-rani-primary), var(--siva-rani-secondary));
+            transition: width 0.3s ease;
+        }
+
+        .footer-link:hover::after {
+            width: 100%;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .social-icon:hover {
+            background: linear-gradient(45deg, var(--siva-rani-primary), var(--siva-rani-secondary));
+            transform: translateY(-5px);
+        }
+
+        .footer-copyright {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        .footer-wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%23ffffff" opacity=".05"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="%23ffffff" opacity=".05"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%23ffffff" opacity=".05"/></svg>');
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: -1;
+            animation: waveMove 20s linear infinite;
+        }
+
+        @keyframes waveMove {
+            0% { background-position-x: 0; }
+            100% { background-position-x: 1200px; }
+        }
+
+        /* Siva Rani Cursor - Custom Animated Cursor */
+        .siva-rani-cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: rgba(100, 0, 255, 0.5);
+            pointer-events: none;
+            mix-blend-mode: screen;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            transition: transform 0.1s ease;
+        }
+
+        .cursor-follower {
+            position: fixed;
+            width: 40px;
+            height: 40px;
+            border: 2px solid rgba(255, 0, 200, 0.5);
+            border-radius: 50%;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 9998;
+            transition: all 0.3s ease;
+        }
+
+        /* Siva Rani Ripple Effect */
+        .ripple {
+            pointer-events: none;
+            position: absolute;
+            transform: scale(0);
+            opacity: 0.75;
+            animation: ripple 0.6s linear;
+            z-index: 2;
+        }
+
+        @keyframes ripple {
+            to {
+                transform: scale(2.5);
+                opacity: 0;
+            }
+        }
+
+        /* Siva Rani Responsive Design */
+        @media (max-width: 1200px) {
+            .g-siva-rani-title {
+                font-size: 4rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .g-siva-rani-container {
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .g-siva-rani-content {
+                max-width: 100%;
+                margin-bottom: 3rem;
+            }
+
+            .g-siva-rani-image-container {
+                width: 60%;
+                height: 50%;
+            }
+
+            .g-siva-rani-buttons {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .g-siva-rani-title {
+                font-size: 3rem;
+            }
+
+            .g-siva-rani-subtitle {
+                font-size: 1.2rem;
+                max-width: 100%;
+            }
+
+            .g-siva-rani-image-container {
+                width: 80%;
+                height: 40%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .g-siva-rani-title {
+                font-size: 2.5rem;
+            }
+
+            .g-siva-rani-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Siva Rani Animations - Advanced Keyframes */
+        @keyframes sivaRaniPulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+        }
+
+        @keyframes sivaRaniSpin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes sivaRaniBounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-30px); }
+            60% { transform: translateY(-15px); }
+        }
+
+        @keyframes sivaRaniFlicker {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        @keyframes sivaRaniShake {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+            100% { transform: translateX(0); }
+        }
+
+        /* Siva Rani Scroll Animations */
+        [data-siva-rani-animate] {
+            opacity: 0;
+            transition: all 0.8s ease;
+        }
+
+        [data-siva-rani-animate="fade-up"] {
+            transform: translateY(50px);
+        }
+
+        [data-siva-rani-animate="fade-down"] {
+            transform: translateY(-50px);
+        }
+
+        [data-siva-rani-animate="fade-left"] {
+            transform: translateX(-50px);
+        }
+
+        [data-siva-rani-animate="fade-right"] {
+            transform: translateX(50px);
+        }
+
+        [data-siva-rani-animate="zoom-in"] {
+            transform: scale(0.8);
+        }
+
+        [data-siva-rani-animate="zoom-out"] {
+            transform: scale(1.2);
+        }
+
+        [data-siva-rani-animate].animate {
+            opacity: 1;
+            transform: translate(0) scale(1);
+        }
+
+        /* Siva Rani Loading Animation */
+        .siva-rani-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--siva-rani-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 99999;
+            transition: opacity 1s ease, visibility 1s ease;
+        }
+
+        .loader-content {
+            text-align: center;
+        }
+
+        .loader-spinner {
+            width: 80px;
+            height: 80px;
+            border: 5px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            border-top-color: var(--siva-rani-primary);
+            animation: sivaRaniSpin 1s linear infinite;
+            margin: 0 auto 2rem;
+        }
+
+        .loader-text {
+            font-size: 1.5rem;
+            font-weight: 600;
+            background: linear-gradient(45deg, var(--siva-rani-primary), var(--siva-rani-secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: sivaRaniPulse 2s infinite;
+        }
+
+        /* Siva Rani Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(var(--siva-rani-primary), var(--siva-rani-secondary));
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(var(--siva-rani-secondary), var(--siva-rani-primary));
+        }
+
+        .quantum-button {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <!-- Siva Rani Cursor -->
+    <div class="siva-rani-cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Siva Rani Loader -->
+    <div class="siva-rani-loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <div class="loader-text">Raniamma Loading...</div>
+        </div>
+    </div>
+
+    <!-- Siva Rani Grid System -->
+    <div class="siva-rani-grid">
+        <!-- G.SIVA RANI Section -->
+        <section class="siva-rani-heroine" id="home">
+            <div class="siva-rani-particles" id="particles-js"></div>
+            <div class="g-siva-rani-container">
+                <div class="g-siva-rani-content" data-siva-rani-animate="fade-up">
+                    <h1 class="g-siva-rani-title">G.SIVA RANI</h1>
+                    <p class="g-siva-rani-subtitle">"Frontend Developer | Turning ideas into pixel-perfect reality 
+Passionate about clean code,| Coding my way through life "</p>
+                    <div class="g-siva-rani-buttons">
+                        
+                        <a href="#contact" class="quantum-button quantum-button-outline">Contact Me</a>
+                    </div>
+                </div>
+                <div class="g-siva-rani-image-container" data-siva-rani-animate="fade-down">
+                    <div class="g-siva-rani-image"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Siva Rani Qualifications Section -->
+        <section class="siva-rani-qualifications" id="qualifications">
+            <h2 class="section-title" data-siva-rani-animate="fade-up"> Qualifications</h2>
+            <div class="qualifications-grid">
+                <div class="qualification-card" data-siva-rani-animate="fade-up">
+                    <div class="qualification-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="qualification-title">B.Tech in ECE</h3>
+                    <p class="qualification-subtitle">SRI SAI INSTITUTE OF TECHNOLOGY & SCIENCE</p>
+                    <p class="qualification-description">A motivated Electronics and Communication Engineering (ECE) student with a strong passion for frontend development. Skilled in HTML, CSS, JavaScript, with hands-on experience building responsive web applications.</p>
+                </div>
+                <div class="qualification-card" data-siva-rani-animate="fade-up" data-delay="100">
+                    <div class="qualification-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="qualification-title">DIPLOMA IN ECE 1ST YEAR</h3>
+                    <p class="qualification-subtitle">NELLORE GOVT POLYTECHNIC</p>
+                    <p class="qualification-description">A dedicated Diploma student in Electronics and Communication Engineering (ECE) with a strong foundation in electronics, programming, and hardware systems.</p>
+                </div>
+                <div class="qualification-card" data-siva-rani-animate="fade-up" data-delay="200">
+                    <div class="qualification-icon">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <h3 class="qualification-title">DIPLOMA IN ECE 2-3 YEAR</h3>
+                    <p class="qualification-subtitle">NELLORE GOVT POLYTECHNIC</p>
+                    <p class="qualification-description">High-achieving Diploma graduate in ECE with distinction-grade marks ([85%]) and proven communication skills, demonstrated through technical presentations, team leadership.</p>
+                </div>
+                <div class="qualification-card" data-siva-rani-animate="fade-up" data-delay="300">
+                    <div class="qualification-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="qualification-title">SSC </h3>
+                    <p class="qualification-subtitle">K.G.B.V.T SUNDUPALLE Y.S.R</p>
+                    <p class="qualification-description">Board of Secondary Education, Andhra Pradesh</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Siva Rani Timeline Section -->
+        <section class="siva-rani-timeline" id="journey">
+            <h2 class="section-title" data-siva-rani-animate="fade-up">Siva Rani Journey</h2>
+            <div class="timeline-container">
+                <div class="timeline-item" data-siva-rani-animate="fade-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2024 - Present</div>
+                        <h3 class="timeline-title">PYTHON</h3>
+                        <p class="timeline-description">👩‍💻Currently learning Python and exploring the world of programming. Passionate about problem-solving, automation, and open-source contributions. 📚Building my skills one line of code at a time!</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-siva-rani-animate="fade-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023 - 2024</div>
+                        <h3 class="timeline-title">JavaScript </h3>
+                        <p class="timeline-description"> 👩‍💻 Self-Taught Frontend Developer  
+- Learned HTML/CSS through W3Schools and YouTube tutorials.  📚
+- Built small projects during my diploma and dedicated summer holidays to upskilling.  
+- Passionate about creating clean, responsive designs and expanding my coding skills.  
+- Currently focusing on **JavaScript** to level up my development journey. 🚀  </p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-siva-rani-animate="fade-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2022 - 2023</div>
+                        <h3 class="timeline-title">CSS</h3>
+                        <p class="timeline-description">🌱 Aspiring Frontend Developer | HTML & CSS Enthusiast  
+🔨 Self-taught via W3Schools & YouTube | Built projects to solidify learning  
+📚 Upskilled in CSS during post-diploma summer break  
+🎯 Next goal: Master JavaScript & contribute to open source!  </p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-siva-rani-animate="fade-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2022 - 2023</div>
+                        <h3 class="timeline-title">HTML</h3>
+                        <p class="timeline-description"><p>  
+                            👩‍💻Self-taught developer who learned HTML from W3Schools and YouTube.  
+                            Started building small projects during my Diploma in 3rd year.  📚
+                            Passionate about coding and committed to becoming a professional developer.  
+                            Currently sharpening my skills to create impactful digital solutions.  
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Siva Rani Skills Section -->
+        <section class="siva-rani-skills" id="skills">
+            <h2 class="section-title" data-siva-rani-animate="fade-up"> Skills</h2>
+            <div class="skills-container">
+                <div class="skill-item" data-siva-rani-animate="zoom-in">
+                    <div class="skill-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <span class="skill-name">HTML</span>
+                </div>
+                <div class="skill-item" data-siva-rani-animate="zoom-in" data-delay="50">
+                    <div class="skill-icon">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <span class="skill-name">CSS</span>
+                </div>
+                <div class="skill-item" data-siva-rani-animate="zoom-in" data-delay="100">
+                    <div class="skill-icon">
+                        <i class="fas fa-cube"></i> <!-- Changed from fa-hologram -->
+                    </div>
+                    <span class="skill-name">POWER POINT</span>
+                </div>
+                <div class="skill-item" data-siva-rani-animate="zoom-in" data-delay="150">
+                    <div class="skill-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <span class="skill-name">MS OFFICE</span>
+                </div>
+                <div class="skill-item" data-siva-rani-animate="zoom-in" data-delay="200">
+                    <div class="skill-icon">
+                        <i class="fas fa-vr-cardboard"></i>
+                    </div>
+                    <span class="skill-name">PYTHON BASICS</span>
+                </div>
+                <div class="skill-item" data-siva-rani-animate="zoom-in" data-delay="250">
+                    <div class="skill-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <span class="skill-name">C LANGUAGE BASICS</span>
+                </div>
+                
+                
+            </div>
+        </section>
+
+        <!-- Siva Rani Contact Section -->
+        <section class="siva-rani-contact" id="contact">
+            <h2 class="section-title" data-siva-rani-animate="fade-up"> Connect with Me</h2>
+            <div class="contact-container" data-siva-rani-animate="zoom-in">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" class="form-input" id="name" placeholder=" " required>
+                        <label for="name" class="form-label">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-input" id="email" placeholder=" " required>
+                        <label for="email" class="form-label">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-input" id="subject" placeholder=" " required>
+                        <label for="subject" class="form-label">Subject</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-input form-textarea" id="message" placeholder=" " required></textarea>
+                        <label for="message" class="form-label">Your Message</label>
+                    </div>
+                    <button type="submit" class="submit-button quantum-button quantum-button-outline">
+                        <i class="fas fa-paper-plane"></i> SEND MESSAGE
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Siva Rani Footer -->
+        <footer class="siva-rani-footer">
+            <div class="footer-content">
+                <div class="footer-logo">G.SIVA RANI</div>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Home</a>
+                    <a href="#qualifications" class="footer-link">Education</a>
+                    <a href="#journey" class="footer-link">Journey</a>
+                    <a href="#skills" class="footer-link">Skills</a>
+                    <a href="#contact" class="footer-link">Contact Me</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+                <div class="footer-copyright">
+                    &copy; 2025 SIVA RANI. All rights reserved.
+                </div>
+            </div>
+            <div class="footer-wave"></div>
+        </footer>
+    </div>
+
+    <script defer>
+        // Siva Rani Loader
+        window.addEventListener('load', function() {
+            const loader = document.querySelector('.siva-rani-loader');
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                loader.style.visibility = 'hidden';
+            }, 1500);
+        });
+
+        // Siva Rani Cursor
+        const cursor = document.querySelector('.siva-rani-cursor');
+        const cursorFollower = document.querySelector('.cursor-follower');
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            
+            setTimeout(() => {
+                cursorFollower.style.left = e.clientX + 'px';
+                cursorFollower.style.top = e.clientY + 'px';
+            }, 100);
+        });
+
+        // Interactive Elements
+        const interactiveElements = document.querySelectorAll('a, button, .skill-item, .qualification-card, .timeline-content');
+        
+        interactiveElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.style.transform = 'translate(-50%, -50%) scale(1.5)';
+                cursor.style.background = 'rgba(255, 0, 200, 0.7)';
+                cursorFollower.style.transform = 'translate(-50%, -50%) scale(0.5)';
+                cursorFollower.style.borderColor = 'rgba(100, 0, 255, 0.7)';
+            });
+            
+            el.addEventListener('mouseleave', () => {
+                cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+                cursor.style.background = 'rgba(100, 0, 255, 0.5)';
+                cursorFollower.style.transform = 'translate(-50%, -50%) scale(1)';
+                cursorFollower.style.borderColor = 'rgba(255, 0, 200, 0.5)';
+            });
+        });
+
+        // Siva Rani Particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles-js');
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Random properties
+                const size = Math.random() * 5 + 2;
+                const posX = Math.random() * 100;
+                const posY = Math.random() * 100 + 100;
+                const duration = Math.random() * 20 + 10;
+                const delay = Math.random() * 10;
+                const opacity = Math.random() * 0.5 + 0.1;
+                const hue = Math.random() * 60 + 260;
+                
+                // Apply properties
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${posX}%`;
+                particle.style.top = `${posY}%`;
+                particle.style.animationDuration = `${duration}s`;
+                particle.style.animationDelay = `-${delay}s`;
+                particle.style.opacity = opacity;
+                particle.style.background = `hsl(${hue}, 100%, 70%)`;
+                particle.style.setProperty('--random-x', Math.random() * 2 - 1);
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        createParticles();
+
+        // Siva Rani Scroll Animations
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('[data-siva-rani-animate]');
+            
+            elements.forEach(el => {
+                const elementPosition = el.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                
+                if (elementPosition < screenPosition) {
+                    el.classList.add('animate');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', animateOnScroll);
+        animateOnScroll(); // Initialize
+
+        // Siva Rani Noise Effect
+        let lastNoiseTime = 0;
+        document.addEventListener('mousemove', (e) => {
+            const now = Date.now();
+            if (now - lastNoiseTime < 50) return; // Throttle to every 50ms
+            lastNoiseTime = now;
+
+            const noise = document.createElement('div');
+            noise.classList.add('particle');
+            
+            // Position at mouse
+            noise.style.left = e.clientX + 'px';
+            noise.style.top = e.clientY + 'px';
+            
+            // Random properties
+            const size = Math.random() * 10 + 5;
+            const duration = Math.random() * 3 + 1;
+            const hue = Math.random() * 60 + 260;
+            
+            noise.style.width = `${size}px`;
+            noise.style.height = `${size}px`;
+            noise.style.animation = `sivaRaniPulse ${duration}s infinite`;
+            noise.style.background = `hsl(${hue}, 100%, 70%)`;
+            noise.style.pointerEvents = 'none';
+            
+            document.body.appendChild(noise);
+            if (this.type !== 'submit') e.preventDefault();            setTimeout(() => {
+                noise.remove();
+            }, duration * 1000);
+        });
+
+        // Siva Rani Interactive Background
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            document.body.style.setProperty('--mouse-x', x);
+            document.body.style.setProperty('--mouse-y', y);
+        });
+
+        // Siva Rani Button Ripple Effect
+        const buttons = document.querySelectorAll('.quantum-button');
+        
+        buttons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                if (this.type !== 'submit') e.preventDefault();
+
+                // Remove existing ripple if present
+                const oldRipple = this.querySelector('.ripple');
+                if (oldRipple) oldRipple.remove();
+
+                const ripple = document.createElement('span');
+                ripple.classList.add('ripple');
+
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+
+                ripple.style.width = ripple.style.height = `${size}px`;
+                ripple.style.left = `${x}px`;
+                ripple.style.top = `${y}px`;
+                ripple.style.background = 'rgba(255, 255, 255, 0.3)';
+                ripple.style.borderRadius = '50%';
+                ripple.style.position = 'absolute';
+                ripple.style.transform = 'scale(0)';
+                ripple.style.animation = 'ripple 0.6s linear';
+
+                this.appendChild(ripple);
+
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+
+        // Quantum Audio Synth (Experimental)
+        let audioContext;
+        document.addEventListener('click', () => {
+            if (!audioContext) {
+                audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            }
+            const oscillator = audioContext.createOscillator();
+            const gainNode = audioContext.createGain();
+
+            oscillator.type = 'sine';
+            oscillator.frequency.value = 440 + Math.random() * 880;
+            gainNode.gain.value = 0.1;
+
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+
+            oscillator.start();
+            gainNode.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.5);
+            oscillator.stop(audioContext.currentTime + 0.5);
+        });
+
+        // Siva Rani Color Shift
+        function shiftColors() {
+            const hueShift = Math.sin(Date.now() / 10000) * 60;
+            document.documentElement.style.setProperty('--siva-rani-primary', `hsl(${265 + hueShift}, 100%, 60%)`);
+            document.documentElement.style.setProperty('--siva-rani-secondary', `hsl(${325 + hueShift}, 100%, 60%)`);
+            requestAnimationFrame(shiftColors);
+        }
+
+        shiftColors();
+
+        // Siva Rani Parallax
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth - 0.5;
+            const y = e.clientY / window.innerHeight - 0.5;
+            const img = document.querySelector('.g-siva-rani-image');
+            if (img) {
+                img.style.transform = `rotateY(${x * 10}deg) rotateX(${-y * 10}deg)`;
+            }
+        });
+
+        // Siva Rani Typewriter Effect
+        const heroTitle = document.querySelector('.g-siva-rani-title');
+        if (heroTitle && heroTitle.textContent.trim() !== '') {
+            const originalText = heroTitle.textContent;
+            heroTitle.textContent = '';
+
+            let i = 0;
+            const typeWriter = setInterval(() => {
+                if (i < originalText.length) {
+                    heroTitle.textContent += originalText.charAt(i);
+                    i++;
+                } else {
+                    clearInterval(typeWriter);
+                }
+            }, 50); // Was 100ms, now 50ms for faster typing
+        }
+
+        // Siva Rani Typing Sound for Contact Section
+    function playTypingSound() {
+        if (!window.typingAudioCtx) {
+            window.typingAudioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        }
+        const ctx = window.typingAudioCtx;
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'square';
+        osc.frequency.value = 660 + Math.random() * 40;
+        gain.gain.value = 0.07 + Math.random() * 0.03;
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.07);
+        osc.stop(ctx.currentTime + 0.07);
+    }
+
+    document.querySelectorAll('.siva-rani-contact .form-input, .siva-rani-contact .form-textarea').forEach(input => {
+        input.addEventListener('input', playTypingSound);
+    });
+
+    // Unique mail send sound on SEND MESSAGE
+    function playMailSendSound() {
+        if (!window.mailAudioCtx) {
+            window.mailAudioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        }
+        const ctx = window.mailAudioCtx;
+        // "Whoosh" + "ding" effect
+        // Whoosh
+        const whoosh = ctx.createOscillator();
+        const whooshGain = ctx.createGain();
+        whoosh.type = 'triangle';
+        whoosh.frequency.setValueAtTime(300, ctx.currentTime);
+        whoosh.frequency.linearRampToValueAtTime(1200, ctx.currentTime + 0.18);
+        whooshGain.gain.setValueAtTime(0.18, ctx.currentTime);
+        whooshGain.gain.linearRampToValueAtTime(0.01, ctx.currentTime + 0.18);
+        whoosh.connect(whooshGain).connect(ctx.destination);
+        whoosh.start(ctx.currentTime);
+        whoosh.stop(ctx.currentTime + 0.18);
+
+        // Ding (delayed)
+        const ding = ctx.createOscillator();
+        const dingGain = ctx.createGain();
+        ding.type = 'sine';
+        ding.frequency.setValueAtTime(1400, ctx.currentTime + 0.18);
+        dingGain.gain.setValueAtTime(0.12, ctx.currentTime + 0.18);
+        dingGain.gain.linearRampToValueAtTime(0.001, ctx.currentTime + 0.38);
+        ding.connect(dingGain).connect(ctx.destination);
+        ding.start(ctx.currentTime + 0.18);
+        ding.stop(ctx.currentTime + 0.38);
+    }
+
+    // Attach to contact form submit
+    document.querySelector('.siva-rani-contact .contact-form').addEventListener('submit', function(e) {
+        playMailSendSound();
+        // Let the form submit as normal, or add e.preventDefault() if you want to prevent actual submission
+    });
+    </script>
+</body>
+</html>
